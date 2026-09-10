@@ -6,11 +6,13 @@
 
 - Image comparison sliders
 - Lightbox-style galleries (vanilla adapter for `data-lightbox` markup)
-- Medium zoom
+- Medium zoom for images and publication preview videos
 - Image sliders
 - PhotoSwipe galleries
 - Spotlight galleries
 - VenoBox galleries
+
+The Medium Zoom browser bundle is vendored so zoom behavior is reproducible without a runtime CDN dependency. It is based on `medium-zoom` 1.1.0 with video-element support from francoischalifour/medium-zoom#214; the upstream MIT license is included alongside the bundle.
 
 ## Installation
 

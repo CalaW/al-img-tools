@@ -53,15 +53,6 @@ module AlImgTools
       },
       'version' => '8.0.6'
     },
-    'medium_zoom' => {
-      'integrity' => {
-        'js' => 'sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc='
-      },
-      'url' => {
-        'js' => 'https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js'
-      },
-      'version' => '1.1.0'
-    },
     'photoswipe' => {
       'integrity' => {
         'js' => 'sha256-VCBpdxvrNNxGHNuTdNqK9kPFkev2XY7DYzHdmgaB69Q='
@@ -246,12 +237,7 @@ module AlImgTools
       if medium_zoom_enabled?(context, images)
         output << <<~HTML
           <!-- Medium Zoom JS -->
-          <script
-            defer
-            src="#{library_url('medium_zoom', 'js')}"
-            integrity="#{library_integrity('medium_zoom', 'js')}"
-            crossorigin="anonymous"
-          ></script>
+          <script defer src="#{asset_url(context, 'medium-zoom.min.js', 'vendor')}"></script>
           <script defer src="#{asset_url(context, 'zoom.js')}"></script>
         HTML
       end
