@@ -14,6 +14,8 @@
 
 The Medium Zoom browser bundle is vendored so zoom behavior is reproducible without a runtime CDN dependency. It is based on `medium-zoom` 1.1.0 with video-element support from francoischalifour/medium-zoom#214; the upstream MIT license is included alongside the bundle.
 
+Videos zoom using the original connected element, preserving the selected source, buffer, and playback position. This also supports native `<source>` fallback without per-video scripts. Images retain the standard clone-based zoom behavior. Video ancestors must allow overflow so the enlarged element is not clipped.
+
 ## Installation
 
 ```ruby
